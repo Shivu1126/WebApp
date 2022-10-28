@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.subItem{
+    margin: 0 0 0 0.55%;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    width: 17%;
+    font-size: 15px;
+    padding: 1%;
+    border: 1px solid black;
+    background: lightgreen;
+    cursor:pointer;
+}
+.subItem:hover{
+	transition: 1s ease;
+	background-color: black;
+	color: red;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+p{
+    margin: 5%;
+    font-size: 25px;
+}
+.tabContent{
+    margin-left: 2%;
+    margin-right: 2%;
+    width: fit;   
+    background-image: url("wheat_spike_summer-wallpaper-1920x1080.jpg");
+    background-size: cover;
+
+}
+#tamil,#english,#maths,#science,#social
+{
+	text-align: left;
+	font-size: 25px;
+	margin-left: 4%;
+   	margin-right: 4%;
+}
+#tamilList,#englisList,#mathsList,#sciList,#socialList
+{
+	margin-left: 40px;
+}
+		button
+		{
+
+			width: 25%;
+			font-size: 15px; 
+			border: 2px solid black;
+			background-color: #3366ff; 
+			border-radius: 25px; 
+			padding-top: 10px;
+			padding-bottom: 10px;
+			cursor: pointer;
+			color: white;
+		}
+
+		button:hover
+		{
+
+			transition: 1s ease; 
+			background-color: ghostwhite;
+			color: black;
+		}
+h1{
+    margin: 1%;
+}
+.active{
+    background-color: red;
+}
+
+.alert {
+  padding: 20px; 
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid black;
+  background-color: rgba(0, 0, 0, 0.50);
+  color: white;
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 30px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

@@ -1,0 +1,213 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="Quiz.css" rel="stylesheet" />
+	<title>General Quiz</title>
+</head>
+<body>
+	<div id="bodyStyle">
+		<h1 align ="center" id = "Subjects">Quiz Competition</h1>
+            <p id="paragraph"></p>
+
+		<ul>
+		   <li class ="subItem" id="l1" onclick="showClickedTab(event)">தமிழ்</li>
+		   <li class ="subItem" id="l2" onclick="showClickedTab(event)">English</li>
+		   <li class ="subItem" id="l3" onclick="showClickedTab(event)">Maths</li>
+  		   <li class ="subItem" id="l4" onclick="showClickedTab(event)">Science</li>
+		   <li class ="subItem" id="l5" onclick="showClickedTab(event)">Social</li>
+		</ul>
+		<br>
+		<div>
+			<div id="tamil" class="tabContent hide">
+				<ol id="tamilList">
+					<li>கம்பர் பிறந்த ஊர் யாது?<br>
+							<input id="a" type="radio" name="t1">A) பொன்விளைந்த களத்தூர்
+							<input id="b" type="radio" name="t1">B) தேரழுந்தூர்
+							<input id="c" type="radio" name="t1">C) திருப்பெழுந்தூர்
+							<input id="d" type="radio" name="t1">D) திருநாவலூர்
+					</li><br>
+					<li>கீழ்க்கண்டவற்றில் யார் அவி உணவை உட்கொள்வர் என்று வள்ளுவர் கூறுகிறார்?<br>
+							<input id="a" type="radio" name="t2">A] முனிவர்கள்
+							<input id="b" type="radio" name="t2">B] தேவர்கள்
+							<input id="c" type="radio" name="t2">C] மன்னர்கள்
+							<input id="d" type="radio" name="t2">D] மக்கள்
+					</li><br>
+					<li>பாரதியாரின் பிறப்பு – இறப்பு ஆண்டு யாது?<br>
+							<input id="a" type="radio" name="t3">A] 1882 - 1921
+							<input id="b" type="radio" name="t3">B] 1888 - 1922
+							<input id="c" type="radio" name="t3">C] 1882 - 1922
+							<input id="d" type="radio" name="t3">D] 1888 - 1921
+					</li><br>
+					<li>நாற்காலி என்பது?<br>
+							<input id="a" type="radio" name="t4"> (A) இடுகுறி பொதுப்பெயர்
+							<input id="b" type="radio" name="t4"> (B) இடுகுறி சிறப்புப்பெயர்
+							<input id="c" type="radio" name="t4"> (C) காரணப் பொதுப்பெயர்
+							<input id="d" type="radio" name="t4"> (D) காரணப் சிறப்புப்பெயர்
+					</li><br>
+					<li>நான்கு சீர்களால் அமையும் அடி........எனப்படும்</li>
+							<input id="a" type="radio" name="t5">A] நெடிலடி
+							<input id="b" type="radio" name="t5">B] அளவடி
+							<input id="c" type="radio" name="t5">C] கழிநெடிலடி
+							<input id="d" type="radio" name="t5">D] சிந்தடி
+					</li><br>
+				</ol><br>
+				<div class="buttTamil" align='center' ><button id="l2" onclick = "tamilFunc();showClickedTab(event)">NEXT</button></div>
+				<br>
+			</div>
+			<div id="english" class="tabContent hide">
+				<ol id="englisList">
+					<li> Synonyms of WARRIOR ?<br>
+						<input id="a" type="radio" name="e1">A. Soldier
+						<input id="b" type="radio" name="e1">B. Sailor
+						<input id="c" type="radio" name="e1">C. Pirate
+						<input id="d" type="radio" name="e1">D. Spy
+					</li><br>
+					<li> Synonyms of Innocuous ?<br>
+						<input id="a" type="radio" name="e2">A. Not eager
+						<input id="b" type="radio" name="e2">B. Harmless
+						<input id="c" type="radio" name="e2">C. Not Frank
+						<input id="d" type="radio" name="e2">D. Not capable
+					</li><br>
+					<li> Antonym of MILITARY ?<br>
+						<input id="a" type="radio" name="e3">A. Civil
+						<input id="b" type="radio" name="e3">B. Militant
+						<input id="c" type="radio" name="e3">C. Civility
+						<input id="d" type="radio" name="e3">D. Coup
+					</li><br>
+					<li> Find the odd word: ?<br>
+						<input id="a" type="radio" name="e4">A. Kiwi
+						<input id="b" type="radio" name="e4">B. Eagle
+						<input id="c" type="radio" name="e4">C. Ostrich
+						<input id="d" type="radio" name="e4">D. Penguin
+					</li><br>
+					<li> Plural form of Woman: ?<br>
+						<input id="a" type="radio" name="e5">A. Womens
+						<input id="b" type="radio" name="e5">B. Womans
+						<input id="c" type="radio" name="e5">C. Women
+						<input id="d" type="radio" name="e5">D. Womanses
+					</li><br>
+				</ol><br>
+				<div class="buttEnglish" align='center' ><button id="l3" onclick = "engFunc();showClickedTab(event)">NEXT</button></div>
+				<br>
+			</div>
+			<div id="maths" class="tabContent hide">
+				<ol id="mathsList">
+					<li> 57 - 12 = 33 + ? (which number) <br>
+						<input id="a" type="radio" name="m1">A. 7
+						<input id="b" type="radio" name="m1">B. 8
+						<input id="c" type="radio" name="m1">C. 24
+						<input id="d" type="radio" name="m1">D. 12
+					</li><br>
+					<li> 54 / 3 = 14 ? 4 (which sign) <br>
+						<input id="a" type="radio" name="m2">A. *
+						<input id="b" type="radio" name="m2">B. -
+						<input id="c" type="radio" name="m2">C. +
+						<input id="d" type="radio" name="m2">D. %
+					</li><br>
+					<li> 7+8+21+33+?= an average of 17 (which should be replace in ?) <br>
+						<input id="a" type="radio" name="m3">A. 15
+						<input id="b" type="radio" name="m3">B. 16
+						<input id="c" type="radio" name="m3">C. 14
+						<input id="d" type="radio" name="m3">D. 17
+					</li><br>
+					<li> 42 bottles of milk cost 60 dollars. What is the price of 5 bottles of milk? <br>
+						<input id="a" type="radio" name="m4">A. $1.43
+						<input id="b" type="radio" name="m4">B. $7.15
+						<input id="c" type="radio" name="m4">C. $0.75
+						<input id="d" type="radio" name="m4">D. $3.50
+					</li><br>
+					<li> Which of the following fractions is greater than 3/5 and less than 5/6? <br>
+						<input id="a" type="radio" name="m5">A. 9/12
+						<input id="b" type="radio" name="m5">B. 4/7
+						<input id="c" type="radio" name="m5">C. 1/2
+						<input id="d" type="radio" name="m5">D. 18/20
+					</li><br>
+				</ol><br>
+				<div class="buttMaths" align='center' ><button id="l4" onclick = "mathFunc();showClickedTab(event)">NEXT</button></div>
+				<br>
+			</div>
+			<div id="science" class="tabContent hide">
+				<ol id="sciList">
+					<li>Which of the following is used in pencils?<br>
+						<input id="a" type="radio" name="s1">A. Graphite
+						<input id="b" type="radio" name="s1">B. Silicon
+						<input id="c" type="radio" name="s1">C. Charcoal
+						<input id="d" type="radio" name="s1">D. Phosphorous
+					</li><br>	
+					<li>Decibel is the unit for ?<br>
+						<input id="a" type="radio" name="s2">A. speed of light
+						<input id="b" type="radio" name="s2">B. radio wave frequency
+						<input id="c" type="radio" name="s2">C. intensity of sound
+						<input id="d" type="radio" name="s2">D. intensity of heat
+					</li><br>
+					<li>How many colours the sunlight spectrum has ?<br>
+						<input id="a" type="radio" name="s3">A. Three
+						<input id="b" type="radio" name="s3">B. Seven
+						<input id="c" type="radio" name="s3">C. Four
+						<input id="d" type="radio" name="s3">D. Five
+					</li><br>
+					<li>In vulcanisation, natural rubber is heated with ?<br>
+						<input id="a" type="radio" name="s4">A. Carbon
+						<input id="b" type="radio" name="s4">B. Silicon
+						<input id="c" type="radio" name="s4">C. Sulphur
+						<input id="d" type="radio" name="s4">D. Phosphorous
+					</li><br>
+					<li>The type of glass used in making lenses and prisms is?<br>
+						<input id="a" type="radio" name="s5">A. jena glass
+						<input id="b" type="radio" name="s5">B. soft glass
+						<input id="c" type="radio" name="s5">C. pyrex glass
+						<input id="d" type="radio" name="s5">D. flint glass
+					</li><br>
+				</ol><br>
+				<div class="buttScience" align='center' ><button id="l5" onclick = "sciFunc();showClickedTab(event)">NEXT</button></div><br>
+			</div>
+			<div id="social" class="tabContent hide">
+				<ol id="socialList">
+					<li>______ was the non-European language that went into print.<br>
+						<input id="a" type="radio" name="ss1">A. Malayalam
+						<input id="b" type="radio" name="ss1">B. Hindi
+						<input id="c" type="radio" name="ss1">C. Tamil
+						<input id="d" type="radio" name="ss1">D. Kujarati
+					</li><br>	
+					<li>Kattabomman was hanged to death at ______<br>
+						<input id="a" type="radio" name="ss2">A. Kudankulam
+						<input id="b" type="radio" name="ss2">B. Kadampur
+						<input id="c" type="radio" name="ss2">C. Kallanai
+						<input id="d" type="radio" name="ss2">D. Kayathar
+					</li><br>
+					<li>The highest peak in South India is <br>
+						<input id="a" type="radio" name="ss3">A. Anaimudi
+						<input id="b" type="radio" name="ss3">B. Kodaikanal
+						<input id="c" type="radio" name="ss3">C. Ooty
+						<input id="d" type="radio" name="ss3">D. Western Ghats
+					</li><br>
+					<li>Which two island countries are India's neighbors ?<br>
+						<input id="a" type="radio" name="ss4">A. Maldieves and Nicobar
+						<input id="b" type="radio" name="ss4">B. SriLanga and Maldieves
+						<input id="c" type="radio" name="ss4">C. Lakshadweep and SriLanga
+						<input id="d" type="radio" name="ss4">D. Lakshadweep and Nicobar
+					</li><br>
+					<li>The unaccounted money that is concealed from the tax administrator is call_______.<br>
+						<input id="a" type="radio" name="ss5">A. White Money
+						<input id="b" type="radio" name="ss5">B. Blue Money
+						<input id="c" type="radio" name="ss5">C. Black Money
+						<input id="d" type="radio" name="ss5">D. Green Money
+					</li><br>
+				</ol><br>
+				<div class="buttSocial" align='center' ><button onclick = "socialFunc();alertFunc();">Submit</button></div><br>		
+				<div class="alert" id="alertID">
+ 					<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+					<strong>Your Score!</strong><br>
+					<div id = "tamilMark"></div>
+					<div id = "englishMark"></div>
+					<div id = "mathsMark"></div>
+					<div id = "scienceMark"></div>
+					<div id = "socialMark"></div>
+					<div id = "totalMark"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+    <script type="text/javascript" src="Quiz.js"></script>
+</html>
