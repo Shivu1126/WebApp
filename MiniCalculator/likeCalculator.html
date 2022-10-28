@@ -1,0 +1,99 @@
+<html>
+<head>
+	<style>
+		body
+		{
+			display: block;
+			justify-content: center;
+			background-image: url("World HD wallpaper 1920x1080 (2).jpg");
+			background-size: cover;
+			color: #ffff4d;	
+			font-family: "Lucida Console", "Courier New", monospace;
+
+		}
+		button
+
+		{
+
+			width: 25%;
+			font-size: 15px; 
+			border: 2px solid black;
+			background-color: #3366ff; 
+			border-radius: 25px; 
+			padding-top: 10px;
+			padding-bottom: 10px;
+			cursor: pointer;
+			color: white;
+		}
+
+		button:hover
+		{
+
+			transition: 0.5s ease; 
+			background-color: ghostwhite;
+			color: black;
+		}
+		#func
+		{
+			background-color: rgba(0, 0, 0, 0.50);
+			padding-bottom: 5%;
+			padding-top: 1%;
+			width: 30%;
+			margin-left: auto;
+  			margin-right: auto;
+			border: 3px solid black;
+		}
+	
+
+	</style>
+	<title>CALCULATOR</title>
+	<h2 align='center'>CALCULATOR</h2>
+</head>
+<body>
+<div id="func">
+	<br></br>
+	<label>
+			<div id="work" align="center">
+				<h3>Enter the 1st number</h3>
+				<input id="inputNumber1" type="number" placeholder="Enter 1st number">
+				<h3>Enter the 2nd number</h3>
+				<input id="inputNumber2" type="number" placeholder="Enter 2nd number">
+				<br><br>
+			</div>
+			<div id="radioButton" align = "center">
+				<input id="+" type="radio" name="opertors"> +<br>
+				<input id="-" type="radio" name="opertors"> -<br>
+				<input id="*" type="radio" name="opertors"> *<br>
+				<input id="/" type="radio" name="opertors"> /<br>
+				<input id="%" type="radio" name="opertors"> %<br>
+			</div><br><br>
+			<div id="butt" align='center'><button onclick = "calc()">check</button>
+				<h3>Output</h3>
+				<input id="outputText" type="text">
+			</div>
+	</label>
+</div>
+<script>
+
+	function calc()
+	{
+		var number1 = document.getElementById('inputNumber1').value;
+		var number2 = document.getElementById('inputNumber2').value;
+
+		var output = document.getElementById('outputText');
+
+		if(document.getElementById('+').checked)
+			output.value = parseInt(number1)+parseInt(number2);
+		if(document.getElementById('-').checked)
+			output.value = number1-number2;
+		if(document.getElementById('*').checked)
+			output.value = number1*number2;
+		if(document.getElementById('/').checked)
+			output.value = number1/number2;		
+		if(document.getElementById('%').checked)
+			output.value = number1%number2;
+	}
+
+</script>
+</body>
+</html>
