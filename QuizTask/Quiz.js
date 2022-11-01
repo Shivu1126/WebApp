@@ -32,7 +32,7 @@ function showClickedTab(event){
     	}
 }
 
-const mark = new Array(5);
+const mark = new Array(0,0,0,0,0);
 function tamilFunc(){	
 	var tamilMark=0;
 	var qus1 = document.getElementsByName("t1"); 
@@ -55,7 +55,6 @@ function tamilFunc(){
       if (qus5[1].checked) { // Checked property to check radio Button check or not  
 		tamilMark++;
       } 
-	alert("Tamil mark = "+tamilMark);
 	mark[0]=tamilMark;
 }
 function engFunc(){
@@ -81,7 +80,6 @@ function engFunc(){
       if (qus5[2].checked) { // Checked property to check radio Button check or not  
 		engMark++;
       } 
-	alert("English mark = "+engMark);
 	mark[1]=engMark;
 }
 function mathFunc(){
@@ -107,7 +105,6 @@ function mathFunc(){
       if (qus5[0].checked) { // Checked property to check radio Button check or not  
 		mathMark++;
       } 
-	alert("Maths mark = "+mathMark);
 	mark[2]=mathMark;
 }
 function sciFunc(){
@@ -133,7 +130,6 @@ function sciFunc(){
       if (qus5[3].checked) { // Checked property to check radio Button check or not  
 		sciMark++;
       } 
-	alert("Science mark = "+sciMark);
 	mark[3]=sciMark;
 }
 function socialFunc(){
@@ -159,14 +155,18 @@ function socialFunc(){
       if (qus5[2].checked) { // Checked property to check radio Button check or not  
 		socialMark++;
       } 
-	alert("Social mark = "+socialMark);
 	mark[4]=socialMark;
 }
 function alertFunc()
 {
 	var displayAlert = document.getElementById("alertID");
 	displayAlert.style.display='block';
-	var tot = mark[0]+mark[1]+mark[2]+mark[3]+mark[4];
+	// var tot = mark[0]+mark[1]+mark[2]+mark[3]+mark[4];
+	var tot=0;
+	for(var i=0;i<mark.length;i++)
+	{
+		tot += mark[i];
+	}
 
 	document.getElementById('tamilMark').innerHTML="Tamil Mark = "+mark[0]+"";
 	document.getElementById('englishMark').innerHTML="English Mark = "+mark[1]+"";
@@ -175,7 +175,7 @@ function alertFunc()
 	document.getElementById('socialMark').innerHTML="Social Mark = "+mark[4]+"";
 	document.getElementById('totalMark').innerHTML="Total Mark = "+tot+"";
 
-	alert("Tamil = "+mark[0]+"\nEnglish = "+mark[1]+"\nMaths = "+mark[2]+"\nScience = "+mark[3]+"\nSocial = "+mark[4]
-			+"\nTotal = "+tot);
+	/*alert("Tamil = "+mark[0]+"\nEnglish = "+mark[1]+"\nMaths = "+mark[2]+"\nScience = "+mark[3]+"\nSocial = "+mark[4]
+			+"\nTotal = "+tot);*/
 	
 }
